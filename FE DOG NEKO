@@ -1,41 +1,18 @@
+    -- when you reset make sure to re-execute this or just make this execute in a loop
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+    game:GetService("RunService").Heartbeat:connect(function()
+    v.Velocity = Vector3.new(-30,0,0)
+    end)
+    end
+    end
+    
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "Netless Ran";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 16;
 --FE Dog Converted By Melon (FE)
-
-wait(2)
-local player = game.Players.LocalPlayer.Character
- 
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["Head"].Velocity = Vector3.new(0,27.95,0)
-end)
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["Torso"].Velocity = Vector3.new(0,27.95,0)
-end)
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["Left Arm"].Velocity = Vector3.new(0,28.95,0)
-end)
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["Right Arm"].Velocity = Vector3.new(0,28.95,0)
-end)
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["Left Leg"].Velocity = Vector3.new(0,28.95,0)
-end)
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["Right Leg"].Velocity = Vector3.new(0,28.95,0)
-end)
- 
-game:GetService("RunService").Heartbeat:Connect(function()
-  player["HumanoidRootPart"].Velocity = Vector3.new(0,28.95,0)
-end)
- 
- 
-game:GetService("RunService").Heartbeat:Connect(function()
-for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do 
-if not v.Handle:FindFirstChild("AccessoryWeld") then 
-v.Handle.Velocity = Vector3.new(30,0,0)
-end
-end
-end)
-
-
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "Melon's (FE) Scripts";
